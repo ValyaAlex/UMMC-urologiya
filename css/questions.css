@@ -1,0 +1,109 @@
+.questions {
+    padding-top: 60px;
+}
+
+.questions__list .ac {
+    margin-top: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--white);
+}
+
+.ac .ac-trigger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font: inherit;
+    padding: 40px 40px 40px 0;
+}
+
+.ac .ac-trigger::after {
+    content: "";
+}
+
+.plus-minus-toggle {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.plus-minus-toggle::before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.plus-minus-toggle::after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.plus-minus-toggle::before,
+.plus-minus-toggle::after {
+    background: var(--gray);
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 14px;
+    -webkit-transition: background-color .3s, -webkit-transform .3s;
+    transition: background-color .3s, -webkit-transform .3s;
+    -o-transition: transform .3s, background-color .3s;
+    transition: transform .3s, background-color .3s;
+    transition: transform .3s, background-color .3s, -webkit-transform .3s;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+}
+
+.accordion .is-active>.ac-trigger .plus-minus-toggle::before,
+.accordion .is-active>.ac-trigger .plus-minus-toggle::after {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background-color: var(--orange);
+}
+
+.questions__item-title {
+    color: var(--gray);
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+    font-weight: 600;
+}
+
+.questions__item:hover .questions__item-title {
+    color: var(--orange);
+}
+
+.questions__item:hover .plus-minus-toggle::before,
+.questions__item:hover .plus-minus-toggle::after {
+    background-color: var(--orange);
+}
+
+.ac .ac-trigger--active span {
+    color: var(--orange);
+}
+
+.ac .ac-panel .ac-text {
+    font: inherit;
+    margin-bottom: 40px;
+    padding: 30px;
+      
+    font-size: 20px;
+}
+
+.ac .ac-header {
+    font-size: 20px;
+      
+}

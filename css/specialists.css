@@ -1,0 +1,463 @@
+.specialists {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.specialist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.specialist__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex-basis: calc(50% - 20px);
+    border: 1px solid var(--border);
+    min-height: 450px;
+    overflow: hidden;
+    background-position: right -60px bottom;
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.specialist__info:hover .specialist__name {
+    color: var(--orange);
+}
+
+.specialist__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 460px;
+    background: rgba(11, 137, 240, 0.18);
+    opacity: .3;
+    border-radius: 50% 50% 79% 21% / 77% 36% 64% 23%;
+    transform: rotate(20deg) translate(-40%, -20%);
+    z-index: -2;
+}
+
+.specialist__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 60px;
+}
+
+.specialists__descr {
+    padding: 60px;
+}
+
+.specialist__name {
+    margin-bottom: 15px;
+    letter-spacing: .8px;
+    max-width: 140px;
+    transition: color .3s;
+}
+
+.specialist__profession,
+.specialist__consultation {
+    font-size: 14px;
+    color: #909EAA;
+    line-height: 20px;
+    max-width: 230px;
+}
+
+.specialist__price {
+    margin-bottom: 20px;
+}
+
+.specialist__btn {
+    color: var(--orange);
+    transition: color .3s;
+
+}
+
+.specialist__btn:hover {
+    color: var(--hover-orange);
+}
+
+.specialist__btn::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: var(--hover-orange);
+    transition: width 0.4s;
+}
+
+.specialist__btn:hover::after {
+    width: 100%;
+}
+
+.specialist-1 {
+    background-image: url(../specialists/Zyrjanov.webp);
+}
+
+.specialist-2 {
+    background-image: url(../specialists/Agzamov.webp);
+}
+
+.specialist-3 {
+    background-image: url(../specialists/Filippova_ES.webp);
+}
+
+.specialist-4 {
+    background-image: url(../specialists/Bershadskyi_AV.webp);
+}
+
+.specialist-5 {
+    background-image: url(../specialists/Artemov.webp);
+}
+
+.specialist-6 {
+    background-image: url(../specialists/Salnikov.webp);
+}
+
+.specialist-7 {
+    background-image: url(../specialists/Arkanov.webp);
+}
+
+.specialist-8 {
+    background-image: url(../specialists/Pankov.webp);
+}
+
+.specialist-9 {
+    background-image: url(../specialists/Terehov.webp);
+}
+
+
+.modal-specialist__progress-item {
+    font-weight: 600;
+}
+
+.modal-specialist__progress-item .modal-specialist__item-descr {
+    padding: 0;
+    font-weight: normal;
+}
+
+.specialists__call {
+    background-color: var(--bg-blue);
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.specialists__call-text {
+    max-width: 50%;
+
+}
+
+/*** modal  ***/
+
+
+.modal-specialist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 964px;
+    max-width: 100%;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    background-color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: hidden;
+    transform: scale(.1, .1) translate(-30%, -50%);
+    -webkit-transition: transform .6s ease;
+    -moz-transition: transform .6s ease;
+    -o-transition: transform .6s ease;
+    transition: transform .6s ease;
+}
+
+.specialist-banner {
+    padding: 100px 110px 70px 100px;
+    background-color: #EDF2F5;
+    background-position: right 80px bottom;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+}
+
+.modal-specialist.modal--visible {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 16px;
+    transform: scale(1, 1) translate(-50%, 0);
+    -webkit-transition: transform .6s ease;
+    -moz-transition: transform .6s ease;
+    -o-transition: transform .6s ease;
+    transition: transform .6s ease;
+}
+
+.specialist-banner__name {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.specialist-banner__profession {
+    font-size: 14px;
+    color: #909EAA;
+    max-width: 450px;
+    line-height: 20px;
+}
+
+.modal-specialist__content {
+    padding: 70px 70px 70px 100px;
+}
+
+.modal-specialist__title {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.modal-specialist__item-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.modal-specialist__item-descr {
+    padding-bottom: 20px;
+}
+
+.list-reset .modal-specialist__item {
+    border-left: 1px solid #E1E4E7;
+    position: relative;
+    padding-left: 35px;
+    margin: 0;
+}
+
+.modal-specialist__item:last-child {
+    border: none;
+}
+
+.modal-specialist__item::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border: 1px solid #E1E4E7;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}
+
+.list-reset .modal-specialist__progress-item,
+.list-reset .modal-specialist__training-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    margin: 0;
+}
+
+.modal-specialist__progress,
+.modal-specialist__specialization {
+    margin-bottom: 70px;
+}
+
+.modal-specialist__specialization-item::before {
+    content: "—";
+    margin-right: 5px;
+}
+
+.modal-specialist__training-item .modal-specialist__item-descr {
+    padding: 0;
+}
+
+.modal-specialist__training ul li:nth-child(1n + 4) {
+    max-height: 0;
+    opacity: 0;
+    display: none;
+    -webkit-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+}
+
+.modal-specialist__training .modal-specialist__training-btn {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border-top: 1px solid var(--orange);
+    color: var(--orange);
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s;
+}
+
+.modal-specialist__training .modal-specialist__training-btn:hover {
+    color: var(--hover-orange);
+}
+
+.modal-specialist__training .modal-specialist__training-btn .loaded {
+    display: none;
+}
+
+.modal-specialist__training-list {
+    position: relative;
+}
+
+.modal-specialist__training #see__more-training-1,
+.modal-specialist__training #see__more-training-2,
+.modal-specialist__training #see__more-training-3,
+.modal-specialist__training #see__more-training-4,
+.modal-specialist__training #see__more-training-5,
+.modal-specialist__training #see__more-training-6,
+.modal-specialist__training #see__more-training-7,
+.modal-specialist__training #see__more-training-8,
+.modal-specialist__training #see__more-training-9 {
+    display: none;
+}
+
+.modal-specialist__training #see__more-training-1~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-2~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-3~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-4~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-5~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-6~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-7~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-8~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-9~ul li:nth-child(3)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 200px;
+    background: linear-gradient(to top, #FFF, #FFF0);
+}
+
+.modal-specialist__training #see__more-training-1:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-2:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-3:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-4:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-5:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-6:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-7:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-8:checked~ul li:nth-child(3)::after,
+.modal-specialist__training #see__more-training-9:checked~ul li:nth-child(3)::after {
+    content: '';
+    background: none;
+}
+
+.modal-specialist__training #see__more-training-1:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-2:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-3:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-4:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-5:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-6:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-7:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-8:checked~ul li:nth-child(1n + 4),
+.modal-specialist__training #see__more-training-9:checked~ul li:nth-child(1n + 4) {
+    max-height: 999px;
+    opacity: 1;
+    display: block;
+    -webkit-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+}
+
+.modal-specialist__training #see__more-training-1:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-2:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-3:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-4:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-5:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-6:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-7:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-8:checked~.modal-specialist__training-btn .loaded,
+.modal-specialist__training #see__more-training-9:checked~.modal-specialist__training-btn .loaded {
+    display: block;
+}
+
+.modal-specialist__training #see__more-training-1:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-2:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-3:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-4:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-5:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-6:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-7:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-8:checked~.modal-specialist__training-btn .unloaded,
+.modal-specialist__training #see__more-training-9:checked~.modal-specialist__training-btn .unloaded {
+    display: none;
+}
+
+.modal-specialist__article-block {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.modal-specialist__article-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: 600;
+    width: 350px;
+    line-height: 20px;
+    transition: color .3s, border-color 0.3s;
+}
+
+.modal-specialist__article-link:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.modal-specialist__article-text {
+    display: block;
+    color: #909EAA;
+    margin-bottom: 40px;
+    font-weight: normal;
+    max-width: 90%;
+    padding-top: 15px;
+}
+
+time {
+    color: #909EAA;
+    font-size: 10px;
+}
+
+.modal-specialist__btn-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.modal-specialist__close-img {
+    width: 15px;
+    height: 15px;
+}

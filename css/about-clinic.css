@@ -1,0 +1,158 @@
+
+.about-clinic {
+    padding-top: 60px;
+    background-image: url(../img/about-clinic-bg.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 87%;
+    padding-bottom: 60px;
+}
+
+.about-clinic .title {
+    margin-bottom: 100px;
+}
+
+.swiper-container {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.text-decoration {
+    color: var(--orange);
+    font-weight: 600;
+    border-bottom: 2px dashed var(--orange);
+}
+
+.about-clinic__swiper-block {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-clinic__swiper-block .swiper {
+    height: 500px;
+    width: 700px;
+}
+
+.swiper .swiper-slide {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    outline: 2px solid var(--white);
+    height: 100%;
+}
+
+.slide-1 {
+    background-image: url(../img/slide1.webp);
+}
+
+.slide-2 {
+    background-image: url(../img/slide2.webp);
+}
+
+.slide-3 {
+    background-image: url(../img/slide3.webp);
+}
+
+.slide-4 {
+    background-image: url(../img/slide4.webp);
+}
+
+.slide-5 {
+    background-image: url(../img/slide5.webp);
+}
+
+.about-clinic__swiper-block .swiper-button-next:after,
+.about-clinic__swiper-block .swiper-button-prev:after {
+    content: url(../icon/chevron_orange.svg);
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -5px;
+}
+
+.about-clinic__swiper-block .swiper-button-next:after {
+    transform: rotate(-90deg);
+    right: 6px;
+    top: 2px;
+}
+
+.about-clinic__swiper-block .swiper-button-next,
+.about-clinic__swiper-block .swiper-button-prev {
+    top: -10%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 100%;
+    border: 1px solid var(--orange);
+    z-index: 1;
+}
+
+.about-clinic__swiper-block .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0;
+}
+
+.about-clinic__swiper-block .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    left: 10%;
+}
+
+.about-clinic__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.about-clinic__list .about-clinic__item {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 2) - 40px);
+    border-radius: 30px;
+    padding: 40px;
+    background-color: var(--bg-orange);
+    box-shadow: 7px 7px 7px var(--border);
+}
+
+.about-clinic__text .about-clinic__descr {
+    margin-bottom: 15px;
+}
+
+.about-clinic__icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.about-clinic__icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 14%;
+    left: 13%;
+    width: 55px;
+    height: 55px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 53px;
+}
+
+.about-clinic__item:nth-of-type(1) .about-clinic__icon::before {
+    background-image: url(../icon/operation.png);
+}
+
+.about-clinic__item:nth-of-type(2) .about-clinic__icon::before {
+    background-image: url(../icon/comfort.png);
+}
+
+.about-clinic__item:nth-of-type(3) .about-clinic__icon::before {
+    background-image: url(../icon/nurse.png);
+}
+
+.about-clinic__list .about-clinic__title {
+    color: var(--orange);
+    margin-bottom: 15px;
+}

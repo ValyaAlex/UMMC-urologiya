@@ -1,0 +1,119 @@
+.contacts {
+    padding-top: 60px;
+}
+
+.contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.contacts-info {
+    width: 100%;
+    max-width: 45%
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts__info,
+.contacts__address {
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+
+.contacts__info span {
+    color: #CACACA;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.contacts__mail {
+    border-radius: 6px;
+    background-color: var(--orange);
+    color: var(--white);
+    width: fit-content;
+    padding: 0px 20px;
+    line-height: 45px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color .3s;
+}
+
+.contacts__mail:hover {
+    background-color: var(--hover-orange);
+}
+
+.contacts-container .contacts__map {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px
+}
+
+.bus-station {
+    margin-bottom: 40px;
+}
+
+.contacts-container .map {
+    position: relative;
+    width: 100%;
+    height: 620px
+}
+
+.contacts__tel {
+    transition: color .3s;
+}
+
+.contacts__tel:hover {
+    color: var(--orange);
+}
+
+ymaps ymaps>[class*=balloon__content] {
+    padding: 15px 25px;
+    height: 70px
+}
+
+ymaps ymaps>[class*=balloon-pane] {
+    top: 135px !important;
+    left: -42px !important
+}
+
+#id_169502680666128622558 {
+    height: 100%
+}
+
+ymaps ymaps>[class*=balloon-content__footer] {
+    max-width: 170px;
+    font-size: 14px
+}
+
+ymaps ymaps>[class*=balloon-content__header] {
+    font-weight: 500;
+    max-width: 170px;
+    font-size: 14px;
+    margin-bottom: 10px
+}
+
+ymaps ymaps>[class*=balloon__tail] {
+    background: 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+ymaps ymaps>[class*=balloon__tail]:after {
+    bottom: 33px;
+    left: 97px;
+    background-color: var(--white);
+    -webkit-box-shadow: inset 0 0 1px -2px rgba(0, 0, 0, .15), 3px -3px 13px 1px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 1px -2px rgba(0, 0, 0, .15), 3px -3px 13px 1px rgba(0, 0, 0, .2)
+}

@@ -1,0 +1,227 @@
+.disease {
+    padding-top: 60px;
+}
+
+.disease__title {
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+.disease__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.disease__item {
+    display: block;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: calc((100% / 4) - 20px);
+    height: 150px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid var(--border);
+    -webkit-transition: border-color .3s, box-shadow .3s, box-shadow .3s;
+    -o-transition: border-color .3s, box-shadow .3s, box-shadow .3s;
+    transition: border-color .3s, box-shadow .3s, box-shadow .3s;
+}
+
+.disease__item:hover {
+    border-color: var(--orange);
+    -webkit-box-shadow: 5px 2px 20px 0px var(--border);
+    box-shadow: 5px 2px 20px 0px var(--border);
+}
+
+.disease__btn {
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 20px;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+
+.disease__item:hover .disease__btn {
+    color: var(--orange);
+}
+
+.modal-overlay,
+.modal-overlay-specialist {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(112, 124, 143, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: 20;
+    visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    overflow-y: scroll;
+}
+
+.modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 90px 35px 90px 60px;
+    height: 450px;
+    max-width: 800px;
+    top: 5%;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    transition: transform .3s;
+}
+
+.modal-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.modal.modal--visible {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    transform: perspective(600px) translate(0, 0%) rotateX(0deg);
+}
+
+.modal__close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.modal__close-img {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-overlay__text {
+    max-width: 90%;  
+    font-size: 16px;   
+}
+
+.modal__more {
+    display: block;
+    color: var(--orange);
+    font-size: 16px;
+    border-bottom: 1px solid var(--orange);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.modal__list {
+    margin-bottom: 40px;
+}
+
+.modal__list .modal__item::before {
+    content: "—";
+    margin-right: 10px;
+}
+
+
+.page-container {
+    padding: 70px 30px;
+}
+
+.disease__page-title {
+    font-size: 35px;
+    padding: 40px;
+    background-color: var(--bg-blue);
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.disease__page-text {
+    margin-bottom: 15px;      
+}
+
+.disease__page-text__link {
+    color: var(--orange);
+    border-bottom: 1px solid var(--orange);
+    -webkit-transition: color .3s, border-color .3s;
+    -o-transition: color .3s, border-color .3s;
+    transition: color .3s, border-color .3s;
+}
+
+.disease__page-text__link:hover {
+    color: var(--hover-orange);
+    border-color: var(--hover-orange);
+}
+
+.page__button {
+    padding-top: 50px;
+}
+
+.page__btn {
+    font-weight: 600;
+    background: var(--orange);
+    padding: 20px 40px;
+    border-radius: 6px;
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
+}
+
+.page__btn:hover {
+    background-color: var(--hover-orange);
+}
+
+.page-container h2 {
+    padding-top: 60px;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.page-container .modal-overlay__text {
+    font-size: 20px;
+}
+
+.page-container .modal__list {
+    margin-bottom: 0;
+}

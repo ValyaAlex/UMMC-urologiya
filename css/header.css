@@ -1,0 +1,94 @@
+.header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    z-index: 2;
+    transition: all .3s;
+}
+
+.header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 20px 40px;
+}
+
+.header__logo-small {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
+.header__logo {
+    margin-right: 10px;
+}
+
+.header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav__list .nav__item {
+    padding: 0 30px;
+    font-size: 16px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.nav__link {
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+
+.nav__link:hover {
+    color: var(--hover-orange);
+}
+
+.header__btn {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    background: var(--orange);
+    border: 1px solid var(--orange);
+    text-align: center;
+    -webkit-transition: color .3s, background .3s, border .3s, opacity .3s;
+    -o-transition: color .3s, background .3s, border .3s, opacity .3s;
+    transition: color .3s, background .3s, border .3s, opacity .3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0;
+    line-height: 45px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.header__btn:hover {
+    background-color: var(--hover-orange);
+}
+
+.header__btn--active {
+    opacity: 1;
+}

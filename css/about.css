@@ -1,0 +1,109 @@
+.about {
+    padding-top: 100px;
+}
+
+.about__text {
+    margin-bottom: 60px;
+}
+
+.about__title {
+    margin-bottom: 15px;
+}
+
+.about__block {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.about__left {
+    width: 55%;
+}
+
+.about__text-decoration {
+    color: var(--orange);
+    border-bottom: 2px dashed var(--orange);
+    width: fit-content;
+}
+
+.about__right {
+    border-radius: 20px;
+    background-color: var(--bg-blue);
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.about__list .about__item:nth-last-of-type(2) {
+    margin-bottom: 20px;
+}
+
+.about__list .about__item {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 1000;
+    color: #63a0fa;
+    font-size: 42px;
+    letter-spacing: -3px;
+}
+
+.about__list .about__item span {
+    display: block;
+    font-weight: normal;
+    color: #acaaaa;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.about__consultation,
+.about__laboratory,
+.about__specialists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+
+.about__consultation-text {
+    width: 60%;
+}
+
+.about__laboratory,
+.about__specialists {
+    width: 100%;
+}
+
+.about__laboratory-text,
+.about__specialists-text {
+    border-radius: 20px;
+    padding: 40px;
+    width: 50%;
+}
+
+.laboratory-img,
+.specialists-img {
+    width: 50%;
+    border-radius: 20px;
+}
+
+.about__therapy {
+    margin-bottom: 60px;
+}
+
+.therapy-img {
+    width: 50%;
+    border-radius: 20px;
+}
+
+.about__therapy-block {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+
+.about__therapy-text {
+    width: 50%;
+}

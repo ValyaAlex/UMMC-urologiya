@@ -1,0 +1,845 @@
+@media (max-width: 1150px) {
+    body {
+        font-size: 18px;
+    }
+
+    .header {
+        z-index: 5;
+    }
+
+    .header__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__nav {
+        position: absolute;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        background-color: var(--white);
+        top: 90px;
+        left: 0;
+        width: 50%;
+        min-width: 250px;
+        height: 100vh;
+        padding: 50px;
+        overflow-y: auto;
+        visibility: hidden;
+        -webkit-transform: translateX(-120%);
+        -ms-transform: translateX(-120%);
+        transform: translateX(-120%);
+        -webkit-transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+        transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+        -o-transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    }
+
+    .nav .nav__list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .nav .nav__item {
+        line-height: 50px;
+    }
+
+    .nav--active {
+        visibility: visible;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        padding: 30px;
+    }
+
+    .nav__link {
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    .close {
+        display: block;
+        margin-bottom: 100px;
+    }
+
+    .stop-scroll {
+        overflow: hidden;
+    }
+
+    .burger {
+        width: 40px;
+        height: 25px;
+        display: block;
+        visibility: visible;
+        position: relative;
+    }
+
+    .burger--active .burger__line {
+        background-color: var(--orange);
+        -webkit-transform: rotate(45deg) translateY(5.5px);
+        -ms-transform: rotate(45deg) translateY(5.5px);
+        transform: rotate(45deg) translateY(5.5px);
+    }
+
+    .burger--active .burger__line:nth-child(2) {
+        -webkit-transform: rotate(-45deg) translateY(-5.5px);
+        -ms-transform: rotate(-45deg) translateY(-5.5px);
+        transform: rotate(-45deg) translateY(-5.5px);
+    }
+
+    .burger::after {
+        content: "";
+        top: 0;
+        left: 0;
+        outline: none;
+    }
+
+    .burger__line {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 20px;
+        height: 3px;
+        border-radius: inherit;
+        background-color: var(--gray);
+        -webkit-transition: width 0.1s, -webkit-transform 0.1s;
+        transition: width 0.1s, -webkit-transform 0.1s;
+        -o-transition: width 0.1s, transform 0.1s;
+        transition: width 0.1s, transform 0.1s;
+        transition: width 0.1s, transform 0.1s, -webkit-transform 0.1s;
+    }
+
+    .burger__line:nth-child(1) {
+        top: 5px;
+    }
+
+    .burger__line:nth-child(2) {
+        top: 51%;
+    }
+
+    .about__right {
+        width: 50%;
+    }
+
+    .about__left {
+        width: 48%;
+    }
+
+    .about__text-decoration {
+        letter-spacing: -1px;
+    }
+
+    .about-clinic .swiper {
+        height: 600px;
+    }
+
+
+    .about-clinic__list {
+        flex-direction: column;
+    }
+
+    .about-clinic__list .about-clinic__item {
+        width: 100%;
+    }
+
+    .about-clinic__icon,
+    .about-clinic__list .about-clinic__title {
+        margin-bottom: 20px;
+        margin-right: 50px;
+    }
+
+    .about-clinic__icon {
+        margin-right: 20px;
+    }
+
+    .call-back__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .call-back__img {
+        max-height: 430px;
+        max-width: 80%;
+    }
+
+    .call-back__descr {
+        max-width: 100%;
+    }
+
+    .call-back__text {
+        text-align: center;
+    }
+
+
+    .disease__item {
+        width: calc((100% / 3) - 20px);
+    }
+
+    .disease__btn {
+        font-size: 18px;
+    }
+
+    .about-clinic .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        left: 8%;
+    }
+
+    .swiper-photo {
+        height: 500px;
+    }
+
+    .specialist__card {
+        background-size: 300px 300px;
+    }
+
+    .specialists__call-text {
+        max-width: 70%;
+    }
+
+    .specialist__card {
+        min-height: 350px;
+    }
+
+    .specialist__profession,
+    .specialist__consultation {
+        max-width: 180px;
+    }
+
+    .modal-specialist__article-block {
+        gap: 20px;
+    }
+
+    .specialist-banner {
+        padding: 70px 80px 70px 70px;
+        background-size: 220px 220px;
+    }
+
+    .specialist-banner__name {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .modal-specialist__title {
+        font-size: 18px;
+    }
+
+    .contacts {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 980px) {
+    body {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .nav__link {
+        font-size: 18px;
+    }
+
+    .info__link {
+        font-size: 16px;
+    }
+
+    .hero {
+        background-size: 100% 100%;
+        padding-top: 170px;
+    }
+
+    .hero__btn {
+        margin-bottom: 170px;
+    }
+
+    .about__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__left,
+    .about__right {
+        width: 100%;
+    }
+
+    .about__right {
+        justify-content: space-evenly;
+    }
+
+
+    .about__therapy-block {
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__therapy-text {
+        width: 100%;
+    }
+
+    .therapy-img {
+        width: 60%;
+    }
+
+    .about__laboratory,
+    .about__consultation {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about__laboratory-text,
+    .about__specialists-text,
+    .about__consultation-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .laboratory-img,
+    .specialists-img,
+    .about__consultation-img {
+        width: 60%;
+    }
+
+    .about__specialists {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .about-clinic .title {
+        margin-bottom: 15px;
+    }
+
+    .about-clinic__descr {
+        margin-bottom: 50px;
+    }
+
+    .about-clinic__list {
+        gap: 20px;
+    }
+
+    .about-clinic__swiper-block {
+        flex-direction: column;
+    }
+
+    .about-clinic .swiper {
+        height: 500px;
+    }
+
+    .call-back .title {
+        font-size: 30px;
+    }
+
+    .call-back__descr {
+        font-size: 20px;
+    }
+
+    .specialist__card {
+        flex-basis: 100%;
+        min-height: 300px;
+        background-size: 250px 250px;
+    }
+
+    .specialist__info,
+    .specialists__descr {
+        padding: 30px;
+    }
+
+    .specialist__name {
+        max-width: 80%;
+    }
+
+    .specialist__profession,
+    .specialist__consultation {
+        max-width: 70%;
+    }
+
+    .specialist__price {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .specialists__call {
+        padding: 20px;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .specialists__call-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacts-info,
+    .contacts__map {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contacts-info {
+        margin-bottom: 40px;
+    }
+
+    .ac .ac-header,
+    .ac .ac-panel .ac-text {
+        font-size: inherit;
+    }
+
+    .ac .ac-panel .ac-text {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .plus-minus-toggle {
+        height: 0px;
+    }
+
+    .page-container .modal-overlay__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .header__container {
+        padding: 20px 10px;
+    }
+
+    .nav__link {
+        font-size: 16px;
+    }
+
+    .nav__item {
+        padding: 0;
+    }
+
+    .title,
+    .info-title {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero__title {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    .hero__text {
+        width: 90%;
+    }
+
+    .hero__btn {
+        line-height: 40px;
+        font-size: 16px;
+        margin-bottom: 120px;
+    }
+
+    .laboratory-img,
+    .specialists-img,
+    .about__consultation-img,
+    .therapy-img {
+        width: 70%;
+    }
+
+    .about-clinic .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        left: 12%;
+    }
+
+    .operation__link,
+    .info__link {
+        font-size: inherit;
+    }
+
+    .call-back__descr {
+        font-size: 20px;
+    }
+
+    .about-clinic .swiper {
+        height: 350px;
+        width: 500px;
+    }
+
+    .swiper-photo {
+        margin-bottom: 50px;
+    }
+
+    .disease__btn {
+        font-size: 16px;
+    }
+
+    .specialists__call-text {
+        max-width: 75%;
+    }
+
+    .swiper-photo {
+        height: 400px;
+    }
+
+    .call-back .title {
+        margin-bottom: 40px;
+    }
+
+    .call-back__descr {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .specialist-banner {
+        background-size: 170px 170px;
+        background-position: right 50px bottom;
+    }
+
+    .specialist-banner__name {
+        font-size: 20px;
+    }
+
+    .modal-specialist__title {
+        font-size: 16px;
+    }
+
+    .modal-specialist__item-title {
+        font-size: 14px;
+    }
+
+    .specialist-banner__profession {
+        font-size: 12px;
+        max-width: 400px;
+    }
+
+    .modal-specialist__content {
+        padding: 40px 40px 40px 70px;
+    }
+
+    .contacts {
+        font-size: 16px;
+    }
+
+    .page-container .modal-overlay__text {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav__link {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .hero__btn {
+        margin-bottom: 70px;
+    }
+
+    .hero__title {
+        font-size: 2em;
+    }
+
+    .hero__text,
+    .hero__descr {
+        font-size: 16px;
+    }
+
+    .header__btn,
+    .hero__btn {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .about__therapy,
+    .about__laboratory,
+    .about__consultation,
+    .about__specialists {
+        margin-bottom: 50px;
+    }
+
+    .about-clinic .swiper {
+        height: 300px;
+        width: 400px;
+    }
+
+    .about-clinic .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        left: 15%;
+    }
+
+    .about-clinic__swiper-block .swiper-button-next, .about-clinic__swiper-block .swiper-button-prev {
+        top: -14%;
+    }
+
+    .specialists__call-btn {
+        font-size: 14px;
+    }
+
+    .operation__link {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .about-clinic__container {
+        padding-bottom: 0;
+        margin-bottom: 0px;
+    }
+
+    .operation,
+    .info {
+        margin-bottom: 100px;
+    }
+
+    .call-back .title {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .call-back__descr {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .disease__item {
+        width: calc((100% / 2) - 20px);
+    }
+
+    .disease__btn {
+        font-size: 14px;
+    }
+
+    .swiper-photo {
+        height: 300px;
+    }
+
+    .specialist-banner {
+        padding: 50px 30px;
+        background-size: 150px 150px;
+    }
+
+    .specialist__card {
+        background-position: right -30px bottom;
+        min-height: 230px;
+        background-size: 200px 200px;
+    }
+
+    .specialist__info,
+    .specialists__descr {
+        padding: 20px;
+    }
+
+    .modal-specialist.modal--visible {
+        font-size: 14px;
+    }
+
+    .ac .ac-trigger {
+        padding: 20px 20px 20px 0;
+    }
+
+    .table-prices__name,
+    .table-prices__price,
+    .btns__link {
+        font-size: 14px;
+    }
+
+    .operation__title {
+        font-size: 25px;
+    }
+
+    .page-container {
+        padding: 20px 30px;
+    }
+
+    .table-prices tr {
+        padding: 0;
+    }
+
+    .page-container .modal-overlay__text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .title,
+    .info-title {
+        font-size: 20px;
+    }
+
+    .about-clinic .swiper {
+        height: 300px;
+    }
+
+    .header__nav {
+        width: 100%;
+        top: 80px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero__btn {
+        margin-bottom: 40px;
+    }
+
+    .hero__title {
+        font-size: 1.7em;
+    }
+
+    .hero__text,
+    .hero__descr {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .header__logo-big {
+        display: none;
+    }
+
+    .header__logo-small {
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    .header__container {
+        padding: 10px;
+    }
+
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-clinic__icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .about-clinic__icon::before {
+        top: 20%;
+        left: 18%;
+        width: 35px;
+        height: 35px;
+        background-size: 35px;
+    }
+
+    .call-back .title {
+        font-size: 20px;
+    }
+
+    .call-back__descr {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .disease__item {
+        width: 100%;
+    }
+
+    .swiper-photo {
+        height: 200px;
+    }
+
+    .specialist__card {
+        min-height: 330px;
+    }
+
+    .specialist-banner__name {
+        font-size: 14px;
+    }
+
+    .specialist-banner__profession {
+        max-width: 280px;
+    }
+
+    .modal-specialist__content {
+        padding: 20px 20px 20px 50px;
+    }
+
+    .specialist-banner {
+        padding: 30px;
+        background-image: none;
+    }
+
+    .modal-specialist__btn-close {
+        top: 30px;
+        right: 30px;
+    }
+
+    .about__list .about__item {
+        font-weight: 800;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 420px) {
+    .about-clinic .swiper {
+        height: 270px;
+        width: 320px;
+    }
+
+    .about-clinic .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        left: 18%;
+    }
+
+    .about-clinic__swiper-block .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: 5px;
+    }
+
+    .disease, .about, .questions, .contacts {
+        padding-top: 50px;
+    }
+
+    .laboratory-img, .specialists-img, .about__consultation-img, .therapy-img {
+        width: 100%;
+    }
+
+    .modal {
+        padding: 30px 15px 20px 20px;
+    }
+}

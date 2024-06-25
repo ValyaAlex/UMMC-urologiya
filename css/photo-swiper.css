@@ -1,0 +1,45 @@
+.swiper-title {
+    padding-top: 60px;
+    border-top: 1px solid var(--border);
+}
+
+.swiper-descr {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.swiper-photo {
+    width: 100%;
+    height: 700px;
+    background-color: var(--bg-blue);
+    margin-bottom: 60px;
+}
+
+.swiper-photo>.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-photo .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    display: none;
+}
+
+.swiper-photo .swiper-slide { 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 75%;
+}
+
+.photo-slide-1 {
+    background-image: url(../img/ugmk.webp);
+}
+
+.photo-slide-2 {
+    background-image: url(../img/palata-stacionara.webp);
+}
+
+.photo-slide-3 {
+    background-image: url(../img/palata-stacionara-2.webp);
+}
+
+.photo-slide-4 {
+    background-image: url(../img/vestibul.webp);
+}
+

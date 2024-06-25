@@ -1,0 +1,196 @@
+.page-container {
+    padding: 70px 30px;
+}
+
+.operation__title {
+    font-size: 35px;
+    padding: 40px;
+    background-color: var(--bg-blue);
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.search__input {
+    width: 100%;
+    border: 1px solid #E2E9ED;
+    border-radius: 5px;
+    padding: 10px 20px 10px 55px;
+    font-family: 'Core Sans A 45 Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    transition: border .3s;
+}
+
+.search__input::placeholder {
+    color: #CACACA;
+}
+
+.search__input:focus {
+    border-color: #65B8EF;
+    outline: none;
+}
+
+.icon__search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.search {
+    position: relative;
+}
+
+.icon__search::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../icon/loupe.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.table-prices {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.table-prices__name {
+    font-size: 18px;
+    line-height: 24px;
+    color: #232427;
+
+}
+
+.line {
+    color: #909EAA;
+}
+
+.btns__link {
+    line-height: 24px;
+    font-size: 16px;
+    color: #909EAA;
+    transition: color .3s;
+}
+
+.btns__link:hover {
+    color: var(--orange);
+}
+
+.table-prices__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.table-prices__price {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.table-prices tr td:last-child {
+    min-width: 150px;
+    text-align: right;
+}
+
+.table-prices tr td {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EDF2F5CC;
+}
+
+.table-prices tr {
+    display: block;
+    border-radius: 5px;
+    margin: 0 -30px;
+    padding: 0 30px;
+    transition: background-color .3s;
+}
+
+.table-prices tr:hover {
+    background-color: #EDF2F5CC;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.icon-favorite__img {
+    filter: grayscale(1);
+    width: 20px;
+    height: 20px;
+    transition: filter .3s;
+}
+
+.icon-favorite__img:hover {
+    filter: grayscale(0);
+}
+
+@keyframes tooltip-bottom--in {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tooltip-bottom {
+    position: absolute;
+    padding: 40px;
+    background: var(--white);
+    z-index: 1;
+    box-shadow: 0 20px 20px rgba(132, 158, 173, .35);
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: tooltip-bottom--out .3s ease-out forwards;
+    display: none;
+}
+
+.tooltip:hover .tooltip-bottom {
+    animation: tooltip-bottom--in .3s ease-out forwards;
+    display: flex;
+}
+
+.tooltip .tooltip-bottom::before {
+    content: "Добавить в избранное";
+}
+
+.tooltip .tooltip-bottom {
+    right: 0;
+    padding: 15px;
+    width: 190px;
+    border: 1px solid #E1E4E7;
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.show-more__btn {
+    width: 100%;
+    text-align: center;
+    background-color: #EDF2F5CC;
+    color: #909EAA;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: color .3s, background-color .3s;
+}
+
+.show-more__btn:hover {
+    color: var(--white);
+    background-color: var(--orange);
+}

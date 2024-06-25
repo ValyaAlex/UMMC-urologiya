@@ -1,0 +1,179 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+:root {
+  --white: #ffffff;
+  --gray: #535B66;
+  --black: #000000;
+  --orange: #F4662A;
+  --hover-orange: #ED6429;
+  --border: #E1E4E7;
+  --bg-orange: #FFEED3;
+  --bg-blue: #ECF5FE;
+
+}
+
+a {
+  color: inherit;
+  outline-offset: 0;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+}
+
+section {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@font-face {
+  font-family: "Core Sans N 45 Regular";
+  src: local('Core Sans N 45 Regular'), local('Core Sans N 45-Regular'), url("../fonts/core_sans_n_45_regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Core Sans N 65 Bold";
+  src: local('Core Sans N45 Bold'), local('Core Sans N 65-Bold'), url("../fonts/core_sans_n_65_bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Core Sans N 45 Regular', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: var(--white);
+  -webkit-text-size-adjust: none;
+  color: var(--gray);
+  line-height: 1.5em;
+  letter-spacing: .3px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.list-reset li {
+  line-height: 1.8em;
+  margin-bottom: 10px;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  height: fit-content;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.responsive-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgb(112, 124, 143);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.stop-scroll .responsive-overlay {
+  visibility: visible;
+  opacity: .8;
+  z-index: 5;
+}
+
+.go-top {
+  position: fixed;
+  left: 25px;
+  top: 115px;
+  cursor: pointer;
+ opacity: 0;
+  height: 14px;
+  width: 17px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-image: url(../icon/chevron_orange.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px;
+  background-color: var(--white);
+  z-index: 2;
+  -webkit-transition: border-color .3s, opacity .3s;
+  -o-transition: border-color .3s, opacity .3s;
+  transition: border-color .3s, opacity .3s;
+}
+
+/* меняем прозрачность при наведении мышкой */
+.go-top:hover {
+  border-color: var(--orange);
+}
+
+/* модификатор для отображения кнопки */
+.go-top--show {
+  opacity: 1;
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all .5s;
+  transform: translateY(0%);
+}
