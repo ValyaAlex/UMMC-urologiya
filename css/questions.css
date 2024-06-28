@@ -1,5 +1,6 @@
 .questions {
     padding-top: 60px;
+    display: none;
 }
 
 .questions__list .ac {

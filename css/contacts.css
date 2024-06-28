@@ -57,7 +57,7 @@
 .contacts-container .contacts__map {
     width: 100%;
     overflow: hidden;
-    border-radius: 6px
+    border-radius: 30px
 }
 
 .bus-station {

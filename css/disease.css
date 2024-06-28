@@ -175,6 +175,7 @@
     background-color: var(--bg-blue);
     border-radius: 10px;
     margin-bottom: 35px;
+    line-height: 35px;
 }
 
 .disease__page-text {
@@ -224,4 +225,29 @@
 
 .page-container .modal__list {
     margin-bottom: 0;
+}
+
+.page__links {
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.page__link {
+    display: block;
+    width: fit-content;
+    color: var(--orange);
+}
+
+.page__link::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: var(--hover-orange);
+    transition: width .4s
+}
+
+.page__link:hover::after {
+    width: 100%
 }

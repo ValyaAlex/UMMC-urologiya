@@ -554,6 +554,21 @@
         font-size: 16px;
     }
 
+    .video-container {
+        flex-direction: column;
+    }
+
+    .video__title {
+        max-width: 100%;
+        text-align: center;
+        margin-right: 0px;
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .video__video {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -690,11 +705,7 @@
     }
 
     .page-container {
-        padding: 20px 30px;
-    }
-
-    .table-prices tr {
-        padding: 0;
+        padding: 70px 10px;
     }
 
     .page-container .modal-overlay__text {
@@ -813,7 +824,12 @@
 
     .about__list .about__item {
         font-weight: 800;
-        font-size: 36px;
+        font-size: 28px;
+        line-height: 37px;
+    }
+
+    .disease__page-title {
+        font-size: 25px;
     }
 }
 
@@ -840,6 +856,6 @@
     }
 
     .modal {
-        padding: 30px 15px 20px 20px;
+        padding: 30px 45px 20px 20px;
     }
 }
