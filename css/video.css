@@ -5,7 +5,7 @@
     padding-bottom: 60px;
     border-bottom: 1px solid var(--border);
     -webkit-box-shadow: 0px 5px 10px var(--border);
-    box-shadow: 0px 5px 10px var(--border)
+    box-shadow: 0px 5px 10px var(--border);
 }
 
 .video__title {

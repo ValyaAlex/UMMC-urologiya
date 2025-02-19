@@ -46,10 +46,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 30px;
 }
 
 .nav__list .nav__item {
-    padding: 0 30px;
     font-size: 16px;
     white-space: nowrap;
     margin: 0;
@@ -81,8 +81,8 @@
     user-select: none;
     opacity: 0;
     line-height: 45px;
-  font-size: 16px;
-  border-radius: 6px;
+    font-size: 16px;
+    border-radius: 6px;
 }
 
 .header__btn:hover {
@@ -91,4 +91,53 @@
 
 .header__btn--active {
     opacity: 1;
+}
+
+
+.header__tel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+.header__tel:focus {
+    color: var(--hover-orange);
+}
+
+.header__tel:hover {
+    color: var(--orange);
+}
+
+.header__tel:active {
+    color: var(--orange);
+}
+
+.header__icon {
+    fill: var(--black);
+    transition: fill 0.4s ease;
+}
+
+.header__tel:focus .header__icon {
+    fill: var(--hover-orange);
+}
+
+.header__tel:hover .header__icon {
+    fill: var(--orange);
+}
+
+.header__tel:active .header__icon {
+    fill: var(--hover-orange);
+}
+
+.header__feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header__contacts {
+    display: none;
 }

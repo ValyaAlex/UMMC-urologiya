@@ -130,6 +130,106 @@
         top: 51%;
     }
 
+    .header__contacts {
+        display: block;
+    }
+
+    .header__contacts-list {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .header__contacts-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__contacts-link::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+    }
+
+    .tel::before {
+        background-image: url(../icon/tel.svg);
+    }
+
+    .address::before {
+        background-image: url(../icon/address.svg);
+    }
+
+    .email::before {
+        background-image: url(../icon/email.svg);
+    }
+
+    .work::before {
+        background-image: url(../icon/work.svg);
+    }
+
+    .header__contacts-link:active {
+        color: var(--orange);
+    }
+
+    .header__contacts-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--white);
+    }
+
+    .header__contacts__icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .header__contacts-icon {
+        fill: var(--orange);
+    }
+
+    .header__tel {
+        display: none
+    }
+
+    .header__tel:focus {
+        color: var(--active-orange);
+    }
+
+    .header__tel:hover {
+        color: var(--orange);
+    }
+
+    .header__tel:active {
+        color: var(--orange);
+    }
+
+    .header__icon {
+        fill: var(--black);
+        transition: fill 0.4s ease;
+    }
+
+    .header__tel:focus .header__icon {
+        fill: var(--active-orange);
+    }
+
+    .header__tel:hover .header__icon {
+        fill: var(--orange);
+    }
+
+    .header__tel:active .header__icon {
+        fill: var(--active-orange);
+    }
+
     .about__right {
         width: 50%;
     }
@@ -582,6 +682,18 @@
         padding-right: 20px;
     }
 
+    .header__nav {
+        width: 70%;
+    }
+
+    .header__contacts-item {
+        font-size: 16px;
+    }
+
+    .nav .nav__item {
+        line-height: 28px;
+    }
+
     .nav__link {
         font-size: 16px;
     }
@@ -621,11 +733,13 @@
         width: 400px;
     }
 
-    .about-clinic .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    .about-clinic .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
         left: 15%;
     }
 
-    .about-clinic__swiper-block .swiper-button-next, .about-clinic__swiper-block .swiper-button-prev {
+    .about-clinic__swiper-block .swiper-button-next,
+    .about-clinic__swiper-block .swiper-button-prev {
         top: -14%;
     }
 
@@ -839,19 +953,27 @@
         width: 320px;
     }
 
-    .about-clinic .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    .about-clinic .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
         left: 18%;
     }
 
-    .about-clinic__swiper-block .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    .about-clinic__swiper-block .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
         left: 5px;
     }
 
-    .disease, .about, .questions, .contacts {
+    .disease,
+    .about,
+    .questions,
+    .contacts {
         padding-top: 50px;
     }
 
-    .laboratory-img, .specialists-img, .about__consultation-img, .therapy-img {
+    .laboratory-img,
+    .specialists-img,
+    .about__consultation-img,
+    .therapy-img {
         width: 100%;
     }
 
